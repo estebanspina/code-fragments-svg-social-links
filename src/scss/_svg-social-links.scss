@@ -1,0 +1,48 @@
+$icons-size: 24px;
+$color-black: rgb(40, 40, 40);
+$color-white: rgb(255, 255, 255);
+
+body {
+  background: $color-black;
+}
+
+.table {
+  margin: $icons-size 0;
+
+  & .row {
+    display: flex;
+
+    & .column {
+      margin: 0 ($icons-size / 2);
+      list-style: none;
+
+      & .link {
+        background: $color-black;
+        display: block;
+        border: ($icons-size / 8) solid $color-white;
+        border-radius: 50%;
+        height: $icons-size * 2;
+        position: relative;
+        width: $icons-size * 2;
+
+        & .icon {
+          fill: $color-white;
+          height: $icons-size;
+          left: 50%;
+          margin: (-$icons-size / 2) 0 0 (-$icons-size / 2);
+          position: absolute;
+          top: 50%;
+          width: $icons-size;
+        }
+
+        &:hover {
+          background-color: $color-white;
+
+          & .icon {
+            fill: $color-black;
+          }
+        }
+      }
+    }
+  }
+}
